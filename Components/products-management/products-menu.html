@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+
+</head>
+<body>
+    <div class="col-lg-4">
+        <!-- Card de Gestión Productos -->
+        <div class="card">
+            <!-- Encabezado de la Card -->
+            <div class="card-header">
+                <h3 class="mb-0 text-center">Gestión de productos</h3>
+            </div>
+            <!-- Cuerpo de la card -->
+            <div class="card-body text-center">
+                <!-- wrapper de botones -->
+                <div class="row">
+                    <div class="col-12 col-sm-6 mb-3">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModalNewProd">
+                            Agregar Producto
+                        </button>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <!-- LESSON LEARNT - use bootstrap's mt-{} class to space elements - https://stackoverflow.com/questions/35148828/bootstrap-spacing-classes-not-working -->
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModalUpdateProd">
+                            Actualizar Producto
+                        </button>
+                    </div>
+                </div>
+                <!-- Modal - New product-->
+                <div class="modal fade text-start" id="myModalNewProd" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header"> <!-- Encabezado -->
+                                <h5 class="modal-title" id="myModalLabel">
+                                    Registrar Producto <!-- txt -->
+                                </h5>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body"> <!-- cuerpo -->
+                                <p>Ingrese los datos del nuevo producto.</p>
+                                <form action="https://google.com/search" method="get">
+                                    <!-- ID -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="modalInputProductID">
+                                            ID del producto <!-- txt -->
+                                        </label>
+                                        <input class="form-control" id="modalInputProductID" type="number"
+                                            aria-describedby="emailHelp">
+                                        <div class="form-text" id="emailHelp">Procure que este valor sea único</div>
+                                    </div>
+                                    <!-- Nombre -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="modalInputProductName">
+                                            Nombre <!-- txt -->
+                                        </label>
+                                        <input class="form-control" id="modalInputProductName" type="text" name="q">
+                                    </div>
+                                    <!-- Precio -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="modalInputProductPrice">
+                                            Valor Unitario <!-- txt -->
+                                        </label>
+                                        <input class="form-control" id="modalInputProductPrice" type="text">
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal - Update product AA-->
+                <div class="modal fade text-start" id="myModalUpdateProd" tabindex="-1" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="myModalLabel">
+                                    Registrar Producto <!-- txt -->
+                                </h5>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Ingrese los datos del nuevo producto.</p>
+                                <form action="#" method="get">
+                                    <!-- ID -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="modalInputProductIDupdate">
+                                            ID del producto <!-- txt -->
+                                        </label>
+                                        <input class="form-control" id="modalInputProductIDupdate" type="number"
+                                            aria-describedby="emailHelp">
+                                        <div class="form-text" id="emailHelp">Revise bien la documentación de IDs</div>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#myModalUpdateProdInput">Traer</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal - Update product BB -->
+                <div class="modal fade text-start" id="myModalUpdateProdInput" tabindex="-1" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header"> <!-- Encabezado -->
+                                <h5 class="modal-title" id="myModalLabel">
+                                    Actualizar Producto <!-- txt -->
+                                </h5>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body"> <!-- cuerpo -->
+                                <p>Ingrese la información actualizada.</p>
+                                <form action="#" method="get">
+                                    <!-- ID -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="modalInputProductIDdisabled">
+                                            ID del producto <!-- txt -->
+                                        </label>
+                                        <input class="form-control" id="modalInputProductIDdisabled" type="number" aria-describedby="emailHelp" value="1000001" disabled>
+                                        <!-- <div class="form-text" id="emailHelp">Procure que este valor sea único</div> -->
+                                    </div>
+                                    <!-- Nombre -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="modalInputProductNameUpdate">
+                                            Nombre <!-- txt -->
+                                        </label>
+                                        <input class="form-control" id="modalInputProductNameUpdate" type="text" placeholder="Carga un nombre">
+                                    </div>
+                                    <!-- Precio -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="modalInputProductPriceUpdate">
+                                            Valor Unitario <!-- txt -->
+                                        </label>
+                                        <input class="form-control" id="modalInputProductPriceUpdate" type="text" placeholder="$$ Carga un valor">
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">Actualizar</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 text-sm-end">
+        <p class="mb-0">From a design by Bootstrapious<a href="https://bootstrapious.com/p/admin-template" class="text-white text-decoration-none">Bootstrapious</a></p>
+        <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+    </div>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</body>
+</html>
