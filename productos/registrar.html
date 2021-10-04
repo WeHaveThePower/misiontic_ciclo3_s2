@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-3 mb-3">
                         <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModalNewProd">
-                            Agregar Producto
+                            Registrar Producto
                         </button>
                     </div>
                     <div class="col-12 col-sm-6 col-md-3 mb-3">
@@ -36,149 +36,358 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-3 mb-3">
                         <!-- LESSON LEARNT - use bootstrap's mt-{} class to space elements - https://stackoverflow.com/questions/35148828/bootstrap-spacing-classes-not-working -->
-                        <a href="./listar.html">
-                            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModalUpdateProd">
-                                Listar
-                            </button>
-                        </a>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myProductList">
+                            Listar
+                        </button>
                     </div>
                     <div class="col-12 col-sm-6 col-md-3 ">
                         <!-- LESSON LEARNT - use bootstrap's mt-{} class to space elements - https://stackoverflow.com/questions/35148828/bootstrap-spacing-classes-not-working -->
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModalUpdateProd">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModalProdSearch">
                             Buscar
                         </button>
                     </div>
                 </div>
-                <!-- Modal - New product-->
-                <div class="modal fade text-start" id="myModalNewProd" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header"> <!-- Encabezado -->
-                                <h5 class="modal-title" id="myModalLabel">
-                                    Registrar Producto <!-- txt -->
-                                </h5>
-                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body"> <!-- cuerpo -->
-                                <p>Ingrese los datos del nuevo producto.</p>
-                                <form action="https://google.com/search" method="get">
-                                    <!-- ID -->
-                                    <div class="mb-3">
-                                        <label class="form-label" for="modalInputProductID">
-                                            ID del producto <!-- txt -->
-                                        </label>
-                                        <input class="form-control" id="modalInputProductID" type="number"
-                                            aria-describedby="emailHelp">
-                                        <div class="form-text" id="emailHelp">Procure que este valor sea único</div>
-                                    </div>
-                                    <!-- Nombre -->
-                                    <div class="mb-3">
-                                        <label class="form-label" for="modalInputProductName">
-                                            Nombre <!-- txt -->
-                                        </label>
-                                        <input class="form-control" id="modalInputProductName" type="text" name="q">
-                                    </div>
-                                    <!-- Precio -->
-                                    <div class="mb-3">
-                                        <label class="form-label" for="modalInputProductPrice">
-                                            Valor Unitario <!-- txt -->
-                                        </label>
-                                        <input class="form-control" id="modalInputProductPrice" type="text">
-                                    </div>
-                                    <button class="btn btn-primary" type="submit">Submit</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal - Update product AA-->
-                <div class="modal fade text-start" id="myModalUpdateProd" tabindex="-1" aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="myModalLabel">
-                                    Registrar Producto <!-- txt -->
-                                </h5>
-                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Ingrese los datos del nuevo producto.</p>
-                                <form action="#" method="get">
-                                    <!-- ID -->
-                                    <div class="mb-3">
-                                        <label class="form-label" for="modalInputProductIDupdate">
-                                            ID del producto <!-- txt -->
-                                        </label>
-                                        <input class="form-control" id="modalInputProductIDupdate" type="number"
-                                            aria-describedby="emailHelp">
-                                        <div class="form-text" id="emailHelp">Revise bien la documentación de IDs</div>
-                                    </div>
-                                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#myModalUpdateProdInput">Traer</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal - Update product BB -->
-                <div class="modal fade text-start" id="myModalUpdateProdInput" tabindex="-1" aria-labelledby="myModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header"> <!-- Encabezado -->
-                                <h5 class="modal-title" id="myModalLabel">
-                                    Actualizar Producto <!-- txt -->
-                                </h5>
-                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body"> <!-- cuerpo -->
-                                <p>Ingrese la información actualizada.</p>
-                                <form action="#" method="get">
-                                    <!-- ID -->
-                                    <div class="mb-3">
-                                        <label class="form-label" for="modalInputProductIDdisabled">
-                                            ID del producto <!-- txt -->
-                                        </label>
-                                        <input class="form-control" id="modalInputProductIDdisabled" type="number" aria-describedby="emailHelp" value="1000001" disabled>
-                                        <!-- <div class="form-text" id="emailHelp">Procure que este valor sea único</div> -->
-                                    </div>
-                                    <!-- Nombre -->
-                                    <div class="mb-3">
-                                        <label class="form-label" for="modalInputProductNameUpdate">
-                                            Nombre <!-- txt -->
-                                        </label>
-                                        <input class="form-control" id="modalInputProductNameUpdate" type="text" placeholder="Carga un nombre">
-                                    </div>
-                                    <!-- Precio -->
-                                    <div class="mb-3">
-                                        <label class="form-label" for="modalInputProductPriceUpdate">
-                                            Valor Unitario <!-- txt -->
-                                        </label>
-                                        <input class="form-control" id="modalInputProductPriceUpdate" type="text" placeholder="$$ Carga un valor">
-                                    </div>
-                                    <button class="btn btn-primary" type="submit">Actualizar</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </div>
+    <!-- Modal - New product-->
+    <div class="modal fade text-start" id="myModalNewProd" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"> <!-- Encabezado -->
+                    <h5 class="modal-title" id="myModalLabel">
+                        Registrar Producto <!-- txt -->
+                    </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"> <!-- cuerpo -->
+                    <p>Ingrese los datos del nuevo producto.</p>
+                    <form action="#" method="get">
+                        <!-- ID -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductID">
+                                ID del producto <!-- txt -->
+                            </label>
+                            <input class="form-control" id="modalInputProductID" type="number"
+                                aria-describedby="emailHelp">
+                            <div class="form-text" id="emailHelp">Procure que este valor sea único</div>
+                        </div>
+                        <!-- Nombre -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductName">
+                                Nombre <!-- txt -->
+                            </label>
+                            <input class="form-control" id="modalInputProductName" type="text" name="q">
+                        </div>
+                        <!-- Precio -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductPrice">
+                                Valor Unitario <!-- txt -->
+                            </label>
+                            <input class="form-control" id="modalInputProductPrice" type="text">
+                        </div>
+                        <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#myModalProdSucces">Registrar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - Update product AA-->
+    <div class="modal fade text-start" id="myModalUpdateProd" tabindex="-1" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        Actualizar Producto <!-- txt -->
+                    </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ingrese el código del producto para actualizar.</p>
+                    <form action="#" method="get">
+                        <!-- ID -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductIDupdate">
+                                ID del producto <!-- txt -->
+                            </label>
+                            <input class="form-control" id="modalInputProductIDupdate" type="number"
+                                aria-describedby="emailHelp">
+                            <div class="form-text" id="emailHelp">Revise bien la documentación de IDs</div>
+                        </div>
+                        <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#myModalUpdateProdInput">Traer</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - Update product BB -->
+    <div class="modal fade text-start" id="myModalUpdateProdInput" tabindex="-1" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"> <!-- Encabezado -->
+                    <h5 class="modal-title" id="myModalLabel">
+                        Actualizar Producto <!-- txt -->
+                    </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"> <!-- cuerpo -->
+                    <p>Ingrese la información actualizada.</p>
+                    <form action="#" method="get">
+                        <!-- ID -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductIDdisabled">
+                                ID del producto <!-- txt -->
+                            </label>
+                            <p class="h4 text-center" id="modalInputProductIDdisabled" type="number" aria-describedby="emailHelp" >1000001</p>
+                            <!-- <div class="form-text" id="emailHelp">Procure que este valor sea único</div> -->
+                        </div>
+                        <!-- Nombre -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductNameUpdate">
+                                Descripción <!-- txt -->
+                            </label>
+                            <input class="form-control" id="modalInputProductNameUpdate" type="text" placeholder="Carga un nombre">
+                        </div>
+                        <!-- Precio -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductPriceUpdate">
+                                Valor Unitario <!-- txt -->
+                            </label>
+                            <input class="form-control" id="modalInputProductPriceUpdate" type="text" placeholder="$$ Carga un valor">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Actualizar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - Buscar-->
+    <div class="modal fade text-start" id="myModalProdSearch" tabindex="-1" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        Buscar Producto <!-- txt -->
+                    </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ingrese el término clave.</p>
+                    <form action="#" method="get">
+                        <!-- ID -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductIDupdate">
+                                Key <!-- txt -->
+                            </label>
+                            <input class="form-control" id="modalInputProductIDupdate" type="number"
+                                aria-describedby="emailHelp">
+                            <div class="form-text" id="emailHelp">Revise bien la documentación de IDs</div>
+                        </div>
+                        <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#myProductListSearch">Buscar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal" data-bs-target="#myProductListSearch">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - Lista Complete-->
+    <div class="modal fade text-start" id="myProductList" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"> <!-- Encabezado -->
+                    <h5 class="modal-title" id="myModalLabel">
+                        Lista de productos <!-- txt -->
+                    </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"> <!-- cuerpo -->
+                    <div class="col-lg-12">
+                        <div class="card mb-0">
+                            <div class="card-header">
+                                <h3 class="h4 mb-0 text-center">Listado de productos</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0 table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Descripción</th>
+                                                <th>Valor Unitario</th>
+                                                <th>Disponible</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- un Component clariiitoooo -->
+                                            <tr>
+                                                <th scope="row">1001</th>
+                                                <td>Pastelito</td>
+                                                <td>3500</td>
+                                                <td>SÍ</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1005</th>
+                                                <td>Dedito</td>
+                                                <td>2500</td>
+                                                <td>NO</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2010</th>
+                                                <td>h2-oh!</td>
+                                                <td>2000</td>
+                                                <td>SÍ</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0" scope="row"></th>
+                                                <td class="border-bottom-0"></td>
+                                                <td class="border-bottom-0"></td>
+                                                <td class="border-bottom-0"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - Lista Search-->
+    <div class="modal fade text-start" id="myProductListSearch" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"> <!-- Encabezado -->
+                    <h5 class="modal-title" id="myModalLabel">
+                        Resultado de la búsqueda <!-- txt -->
+                    </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"> <!-- cuerpo -->
+                    <div class="col-lg-12">
+                        <div class="card mb-0">
+                            <div class="card-header">
+                                <h3 class="h4 mb-0 text-center">Listado de productos</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0 table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Descripción</th>
+                                                <th>Valor Unitario</th>
+                                                <th>Disponible</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- un Component clariiitoooo -->
+                                            <tr>
+                                                <th scope="row">1001</th>
+                                                <td>Pastelito</td>
+                                                <td>3500</td>
+                                                <td>SÍ</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1005</th>
+                                                <td>Dedito</td>
+                                                <td>2500</td>
+                                                <td>NO</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2010</th>
+                                                <td>h2-oh!</td>
+                                                <td>2000</td>
+                                                <td>SÍ</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="border-bottom-0" scope="row"></th>
+                                                <td class="border-bottom-0"></td>
+                                                <td class="border-bottom-0"></td>
+                                                <td class="border-bottom-0"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - Regitro Exitoso-->
+    <div class="modal fade text-start" id="myModalProdSucces" tabindex="-1" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        Actualizar Producto <!-- txt -->
+                    </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Resultado de la actualización.</p>
+                    <form action="#" method="get">
+                        <!-- ID -->
+                        <div class="mb-3">
+                            <label class="form-label" for="modalInputProductIDupdate">
+                                Estado <!-- txt -->
+                            </label>
+                            <input class="text-center form-control" id="modalInputProductIDupdate" type="text" aria-describedby="emailHelp" value="FALLIDO" disabled>
+                            <div class="form-text" id="emailHelp">NO se ha registrado en la base de datos</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p>Este es el componente para el control de la gestión de productos. Está aislado para su proxima inserción como componente de react. Por lo pronto la dinámica se basa principalmente en ventanas modales, estas también será encapsuldas en componentes independientes con el framework</p>
     <div class="col-sm-6 text-sm-end">
-        <p class="mb-0">From a design by Bootstrapious<a href="https://bootstrapious.com/p/admin-template" class="text-white text-decoration-none">Bootstrapious</a></p>
+        <p class="mb-0">por Andrés FRP. Basado en una plantilla de Bootstrapious . <a href="https://bootstrapious.com/p/admin-template" class="text-decoration-none"> link -> Bootstrapious</a></p>
         <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
     </div>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
