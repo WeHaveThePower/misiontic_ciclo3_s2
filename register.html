@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Material Admin by Bootstrapious.com</title>
+    <title>Registrarse</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -31,8 +31,8 @@
               <div class="col-lg-6">
                 <div class="info d-flex justify-content-center flex-column p-4 h-100">
                   <div class="py-5">
-                    <h1 class="display-6 fw-bold">Dashboard</h1>
-                    <p class="fw-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <h1 class="display-6 fw-bold">WeHaveThePowe</h1>
+                    <p class="fw-light mb-0">Sistema de administracion de ventas.</p>
                   </div>
                 </div>
               </div>
@@ -42,21 +42,28 @@
                   <form class="register-form py-5 w-100" method="get" action="login.html">
                     <div class="input-material-group mb-3">
                       <input class="input-material" type="text" name="registerUsername" required data-validate-field="registerUsername">
-                      <label class="label-material" for="register-username">Username                </label>
+                      <label class="label-material" for="register-username">nombre de usuario                </label>
                     </div>
                     <div class="input-material-group mb-3">
                       <input class="input-material" type="email" name="registerEmail" required data-validate-field="registerEmail">
-                      <label class="label-material">Email Address</label>
+                      <label class="label-material">Correo electronico</label>
                     </div>
                     <div class="input-material-group mb-4">
                       <input class="input-material" type="password" name="registerPassword" required data-validate-field="registerPassword">
-                      <label class="label-material">Password</label>
+                      <label class="label-material">Contraseña</label>
                     </div>
                     <div class="form-check mb-4">
                       <input class="form-check-input" id="register-agree" name="registerAgree" type="checkbox" required value="1" data-validate-field="registerAgree">
-                      <label class="form-check-label form-label" for="register-agree">I agree with the terms and policy                        </label>
+                      <label class="form-check-label form-label" for="register-agree">Acepto los termino y politicas                      </label>
                     </div>
-                    <button class="btn btn-primary mb-3" id="login" type="submit">Register</button><br><small class="text-gray-500">Already have an account?  </small><a class="text-sm text-paleBlue" href="login.html">Login</a>
+                    <button class="btn btn-primary mb-3" id="login" type="submit">Registrar</button><br><small class="text-gray-500">Ya tienes una cuenta?  </small><a class="text-sm text-paleBlue" href="login.html">Iniciar sesion</a>
+                    <div class="input-material-group mb-4">
+                      <img src="../img/google/btn_google_signin_light_focus_web.png">
+                     <!--Add buttons to initiate auth sequence and sign out-->
+                    <button id="authorize-button" style="display: none;">Authorize</button>
+                    <button id="signout-button" style="display: none;">Sign Out</button>
+                    </div>
+                 
                   </form>
                 </div>
               </div>
